@@ -33,6 +33,6 @@ jobs:
         continue-on-error: true  # tighten once v0.1 is stable
 
       - name: Run tests
-          env:
+        env:
             GEMINI_API_KEY: dummy-key-for-tests
         run: uv run pytest tests/ -v
