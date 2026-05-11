@@ -5,10 +5,9 @@ before any LLM cost is spent on Layer 2/3.
 """
 import re
 
-from sba.retrieval.indexer import load_corpus
 from sba.config import settings
+from sba.retrieval.indexer import load_corpus
 from sba.synthetic.schemas import RemediationSuggestion
-
 
 TRADE_ID_PATTERN = re.compile(r"^TRD-\d{6}$")
 CASE_ID_PATTERN = re.compile(r"^CASE-\d{6}$")

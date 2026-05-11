@@ -8,7 +8,7 @@ The resolution carries the most useful signal for "what worked before" — losin
 it during retrieval would defeat the purpose. This is a deliberate, defensible
 choice; see ADR-002.
 """
-import json
+
 import pickle
 from pathlib import Path
 
@@ -16,7 +16,6 @@ from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, PointStruct, VectorParams
 from rank_bm25 import BM25Okapi
 from sentence_transformers import SentenceTransformer
-from tqdm import tqdm
 
 from sba.config import settings
 from sba.synthetic.schemas import HistoricalBreak

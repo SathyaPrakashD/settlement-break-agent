@@ -53,7 +53,11 @@ target-version = "py311"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "N", "W", "UP", "B", "SIM", "RUF"]
-ignore = ["E501"]  # line length handled by formatter
+ignore = ["E501", "RUF002"]  # line length handled by formatter; ambiguous unicode is fine in comments
+
+[tool.ruff.lint.per-file-ignores]
+"src/sba/cli.py" = ["B008"]  # Typer uses Option() in defaults by convention
+"src/sba/synthesis/synthesizer.py" = ["F841"]  # stub has unused vars intentionally
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

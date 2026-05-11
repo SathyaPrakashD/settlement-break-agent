@@ -12,9 +12,8 @@ Realism caveats:
     (regulatory holds take longer than SSI mismatches).
   - This is NOT real BFSI data and should not be presented as such.
 """
-import json
 import random
-from datetime import date, timedelta
+from datetime import timedelta
 from pathlib import Path
 
 from faker import Faker

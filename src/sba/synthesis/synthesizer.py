@@ -38,7 +38,6 @@ When you're done:
   - Confirm cited_case_ids only contains IDs that were in the retrieved cases
 ──────────────────────────────────────────────────────────────────────────────
 """
-from sba.config import settings
 from sba.retrieval.dense import RetrievedCase
 from sba.synthesis.prompts import (
     ACTIVE_SYNTHESIS_PROMPT,
