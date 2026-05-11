@@ -20,7 +20,8 @@ class Settings(BaseSettings):
     )
 
     # ──────────────── LLM ────────────────
-    gemini_api_key: str = Field(..., description="Google Gemini API key")
+    #gemini_api_key: str = Field(..., description="Google Gemini API key")
+    gemini_api_key: str = Field(default="", description="Google Gemini API key (required at synthesis time)")
     synthesis_model: str = Field(default="gemini-2.0-flash-exp")
     judge_model: str = Field(default="gemini-2.5-pro")
 

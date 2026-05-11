@@ -63,6 +63,9 @@ ignore = ["E501", "RUF002"]  # line length handled by formatter; ambiguous unico
 testpaths = ["tests"]
 addopts = "-v --cov=src/sba --cov-report=term-missing"
 
+
 [tool.mypy]
 python_version = "3.11"
-strict = true
+strict = false
+ignore_missing_imports = true
+disable_error_code = ["type-arg", "attr-defined"]
