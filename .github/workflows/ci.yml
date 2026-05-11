@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Install Python
+        run: uv python install 3.11
+
+      - name: Install deps
+        run: uv sync --all-extras
+
+      - name: Lint with ruff
+        run: uv run ruff check src tests evals
+
+      - name: Type check with mypy
+        run: uv run mypy src/sba
+        continue-on-error: true  # tighten once v0.1 is stable
+
+      - name: Run tests
+        run: uv run pytest tests/ -v

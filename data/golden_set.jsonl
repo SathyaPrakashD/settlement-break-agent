@@ -1,0 +1,19 @@
+# Golden set for retrieval evaluation. JSONL, one item per line.
+# Comments start with #. Blank lines ignored.
+#
+# Workflow:
+#   1. Run `uv run sba generate-corpus --count 500 --seed 42`
+#   2. Browse the resulting corpus in a notebook
+#   3. For each item, identify the case in the corpus that's the closest
+#      'precedent' an analyst would point to
+#   4. Record (query_break_id, expected_match_id) pairs here
+#
+# Target: 30 hand-labelled pairs covering all 6 BreakCategory values, all 6
+# ProductType values, and a mix of severities.
+#
+# The two examples below are PLACEHOLDERS — replace with real labels after you
+# generate your corpus. The IDs below probably won't exist in your specific
+# generated corpus.
+
+{"query_break_id": "CASE-000010", "expected_match_id": "CASE-000123", "notes": "Both are SSI mismatches on USD leg with the same counterparty — direct precedent"}
+{"query_break_id": "CASE-000042", "expected_match_id": "CASE-000211", "notes": "Both regulatory holds pending OFAC screening — same resolution pattern applies"}

@@ -1,0 +1,48 @@
+# Secrets
+.env
+.env.local
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+
+# Generated data (regenerable — don't bloat git)
+data/breaks_corpus.jsonl
+data/breaks_corpus.json
+data/*.parquet
+
+# Models cache
+.cache/
+models/
+
+# Eval outputs
+evals/results/
+evals/runs/
+
+# Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
