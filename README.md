@@ -1,5 +1,7 @@
 # Settlement Break Investigation Agent
 
+[![CI](https://github.com/SathyaPrakashD/settlement-break-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/SathyaPrakashD/settlement-break-agent/actions/workflows/ci.yml)
+
 > Production-grade retrieval system for financial settlement break investigation. RAG-first foundation that grows into a LangGraph + MCP agent.
 
 **Status:** v0.1 — RAG foundation. Active development.
